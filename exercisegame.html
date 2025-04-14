@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Exercise Generator</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, black, red);
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      margin: 0;
+    }
+
+    h1 {
+      color: red;
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    #exercise-box {
+      background-color: #222;
+      padding: 30px;
+      border-radius: 15px;
+      display: inline-block;
+      border: 3px solid red;
+    }
+
+    #exercise {
+      font-size: 2em;
+      margin: 20px 0;
+      color: #fff;
+    }
+
+    button {
+      background-color: red;
+      color: white;
+      font-size: 1.2em;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #cc0000;
+    }
+
+    a {
+      display: block;
+      margin-top: 40px;
+      color: red;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Random Exercise Generator</h1>
+
+  <div id="exercise-box">
+    <p id="exercise">Click the button to get a workout!</p>
+    <button onclick="generateExercise()">Get Exercise</button>
+  </div>
+
+  <a href="index.html">← Back to Main Website</a>
+
+  <script>
+    const exercises = [
+      "20 Jumping Jacks",
+      "15 Push-ups",
+      "30-Second Plank",
+      "10 Burpees",
+      "25 Mountain Climbers",
+      "20 Bodyweight Squats",
+      "15 Tricep Dips",
+      "20 Walking Lunges",
+      "10 High Knees (each side)",
+      "15 Sit-ups",
+      "20 Russian Twists",
+      "1 Minute Wall Sit"
+    ];
+
+    function generateExercise() {
+      const randomIndex = Math.floor(Math.random() * exercises.length);
+      document.getElementById("exercise").innerText = exercises[randomIndex];
+    }
+  </script>
+</body>
+</html>

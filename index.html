@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fitness & Workout Hub</title>
+  <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, black, red);
+      color: white;
+    }
+
+    .header, .footer {
+      text-align: center;
+      background-color: #111;
+      padding: 30px;
+    }
+
+    .header h1 {
+      font-size: 3em;
+      margin: 0;
+      color: red;
+    }
+
+    .nav {
+      text-align: center;
+      background-color: #222;
+      padding: 15px;
+    }
+
+    .nav a {
+      color: red;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 30px;
+    }
+
+    .section h2 {
+      color: red;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 3px solid red;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    iframe {
+      border: 3px solid red;
+      border-radius: 10px;
+    }
+
+    .footer a {
+      color: red;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Additional styles for the resume section */
+    .resume-section {
+      background-color: #222;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .resume-section h2 {
+      color: red;
+    }
+
+    .resume-section ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .resume-section ul li {
+      margin-left: 20px;
+      position: relative;
+    }
+
+    .resume-section ul li::before {
+      content: "•";
+      color: red;
+      position: absolute;
+      left: -20px;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body id="top">
+
+  <div class="header">
+    <h1>Fitness & Workout Hub</h1>
+    <p>Your go-to place for strength, conditioning, and health advice.</p>
+  </div>
+
+  <div class="nav">
+    <a href="#tips">Workout Tips</a> |
+    <a href="#video">Video</a> |
+    <a href="#tableau">Stats</a> |
+    <a href="exercisegame.html">Play Mini Game</a> |
+    <a href="#resume">My Résumé</a> <!-- Link to the résumé section -->
+    <a href="#top">Back to Top ↑</a>
+  </div>
+
+  <p><a href="game.html" style="color:red; font-weight:bold;">Go to Mini Workout Game</a></p>
+
+  <div class="section" id="tips">
+    <h2>1. Essential Workout Tips</h2>
+    <ul>
+      <li>Start with a dynamic warm-up</li>
+      <li>Focus on form, not just weight</li>
+      <li>Consistency beats intensity</li>
+      <li>Mix strength and cardio workouts</li>
+      <li>Always cool down and stretch</li>
+    </ul>
+
+    <!-- Exercise Images -->
+    <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg" alt="Man flexing muscles">
+    <img src="https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg" alt="Man doing sit-ups">
+    <img src="https://images.pexels.com/photos/3838385/pexels-photo-3838385.jpeg" alt="Man lifting weights">
+  </div>
+
+  <div class="section" id="video">
+    <h2>2. Full Body Workout Routine</h2>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 640px; margin: auto;">
+      <iframe 
+        src="https://www.youtube.com/embed/x9jvUHbbIhU" 
+        title="Full Body Workout for Beginners" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="section" id="tableau">
+    <h2>3. Interactive Tableau Graph</h2>
+    <tableau-viz 
+      id="tableauViz" 
+      src="https://public.tableau.com/views/RegionalSampleWorkbook/Storms" 
+      toolbar="bottom" 
+      hide-tabs 
+      width="100%" 
+      height="600">
+    </tableau-viz>
+  </div>
+
+  <!-- Resume Section -->
+  <div class="section resume-section" id="resume">
+    <h2>My Résumé</h2>
+
+    <div class="resume-section">
+      <h3>Education</h3>
+      <p><strong>Brigham Young University</strong> – Major in Business Management (Expected Graduation: [Year])</p>
+    </div>
+
+    <div class="resume-section">
+      <h3>Work Experience</h3>
+      <p><strong>Bucked Up Warehouse</strong></p>
+      <ul>
+        <li>Packed and organized products for shipping</li>
+        <li>Maintained inventory and stock levels</li>
+      </ul>
+
+      <p><strong>BYU Football Video Crew</strong></p>
+      <ul>
+        <li>Filmed practices and games for analysis</li>
+        <li>Collaborated with coaches and team to capture key plays</li>
+      </ul>
+
+      <p><strong>Hadco Construction</strong></p>
+      <ul>
+        <li>Assisted in construction and site prep</li>
+        <li>Worked with a team to meet project deadlines</li>
+      </ul>
+    </div>
+
+    <div class="resume-section">
+      <h3>Skills</h3>
+      <ul>
+        <li>Video Production & Editing</li>
+        <li>Team Collaboration</li>
+        <li>Warehouse Operations</li>
+        <li>Strong Work Ethic</li>
+      </ul>
+    </div>
+
+    <div class="resume-section">
+      <h3>Awards & Honors</h3>
+      <ul>
+        <li>Lettered in Football and Track, completed a half Iron-Man</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>© 2025 Fitness & Workout Hub</p>
+    <a href="#top">Back to Top ↑</a>
+  </div>
+
+</body>
+</html>
